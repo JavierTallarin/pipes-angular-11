@@ -4,15 +4,47 @@
 <!-- <h1>{{'Pipes' |titlecase}}</h1>
 <h1>{{'Pipes' |uppercase}}</h1>
 <h1>{{'Pipes' |lowercase}}</h1> -->
-<h1>{{nombre |titlecase}}</h1>
-<h1>{{valor|number}}</h1>
-<h1>{{obj|json}}</h1>
 
-<button (click)= "mostrarNombre()">
-  cambiar nombre
-</button>
 
-<button pButton type="button" label="Click" ></button>
-<p-button label="Click" ></p-button>
 
-<h1></h1>
+<div class="text-layout">
+  
+  <h1>{{nombre |titlecase}}</h1>
+  <h1>{{valor|number}}</h1>
+  <h1>{{obj|json}}</h1>
+  <!-- https://primefaces.org/primeng/showcase/#/button -->
+  <button pButton
+    (click)= "mostrarNombre()" 
+    label="cambiar nombre" 
+    icon="pi pi-bell" 
+    iconPos="right"
+    class="p-button-help">
+  </button>
+  
+  
+  <br> 
+  <button pButton type="button" label="Click" ></button>
+  <br>
+
+  <!-- con p-button no se cambian los colores -->
+  <p-button label="Click" ></p-button>
+  <br>
+  
+  <p-card>
+
+    <p-card [header]="nombre |titlecase" subheader="este es un subheader">
+      
+    </p-card>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci accusantium repellat ut recusandae laudantium fugit et exercitationem, harum, voluptatibus fugiat, eveniet sunt maiores aspernatur qui libero labore sint odio possimus?
+    </p>
+
+    
+  </p-card>
+
+
+  <h1></h1>
+
+
+</div>
